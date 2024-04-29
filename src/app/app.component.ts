@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SafeUrl, SafeValue } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'qrProject';
+  title = 'QR Project ';
+  qrdata = 'hola mundo';
+  qrCodeDownloadLink: SafeUrl ='';
+
+  onChange(url: SafeUrl){
+    this.qrCodeDownloadLink = url;
+  }
 }
